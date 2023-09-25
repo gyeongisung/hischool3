@@ -25,7 +25,8 @@ public class SecurityConfiguration {
     //webSecurityCustomizer 를 제외한 모든 것, 시큐리티를 거친다. 보안과 연관
     @Bean
     public SecurityFilterChain filterChain(HttpSecurity httpSecurity, MvcRequestMatcher.Builder mvc) throws Exception {
-        httpSecurity.authorizeHttpRequests(authz ->
+       httpSecurity.cors(cors -> cors.configurationSource(corsConfigurationSource()))
+            .authorizeHttpRequests(authz ->
                     authz.requestMatchers(
                                     mvc.pattern("/swagger.html"), mvc.pattern("/swagger-ui/**"), mvc.pattern("/v3/api-docs/**"),
                                     mvc.pattern("/index.html"), mvc.pattern("/"), mvc.pattern("/static/**"),
