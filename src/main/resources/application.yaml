@@ -11,9 +11,9 @@ spring:
       max-request-size: 12MB
   datasource:
     driver-class-name: org.mariadb.jdbc.Driver
-    url: jdbc:mariadb://localhost:3306/hi_school
-    username: root
-    password: green502
+    url: jdbc:mariadb://${DB_HOST}:${DB_PORT}/hi_school
+    username: ${DB_USERNAME}
+    password: ${DB_USERPASSWORD}
   data:
     redis:
       host: localhost
