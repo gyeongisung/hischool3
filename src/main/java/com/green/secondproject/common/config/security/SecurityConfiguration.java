@@ -81,7 +81,7 @@ public class SecurityConfiguration {
         CorsConfiguration configuration = new CorsConfiguration();
 
         configuration.setAllowedOriginPatterns(Arrays.asList("*"));
-        configuration.setAllowedOrigins(Arrays.asList("https://web-hischool-2rrqq2blmprh3lv.sel5.cloudtype.app"));
+        configuration.setAllowedOrigins(Arrays.asList("https://web-hischool-admin-2rrqq2blmygbmdy.sel5.cloudtype.app"));
         configuration.setAllowedMethods(Arrays.asList("*"));
         configuration.setAllowedHeaders(Arrays.asList("*"));
 
